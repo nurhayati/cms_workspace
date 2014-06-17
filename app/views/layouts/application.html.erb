@@ -9,7 +9,9 @@
 <body>
 <%= render "/layouts/shared/navbar" %>
 <div class="container">
-  <%= yield %>
+  <div class="row row-offcanvas row-offcanvas-right">
+    <%= yield %>
+  </div>
   <%= render "layouts/shared/footer" %>
 </div>
 

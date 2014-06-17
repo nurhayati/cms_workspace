@@ -1,15 +1,17 @@
 class CategoriesController < ApplicationController
   def index
-    @category = Category.all
+    @categories = Category.all
   end
 
 
   def new
-    @catgeory = Catgeory.new
+    @category = Category.new
   end
 
 
   def create
+    @category = Category.new(category_params)
+
     if category.save
       redirect_to categories_path
     else
@@ -28,7 +30,7 @@ class CategoriesController < ApplicationController
 
   def update
     if category.update_attributes(category_params)
-      redirect_to categorys_path
+      redirect_to categories_path
     else
       render 'edit'
     end
@@ -37,7 +39,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     if category.destroy
-      redirect_to categorys_path
+      redirect_to categories_path
     end
   end
 
@@ -48,6 +50,6 @@ class CategoriesController < ApplicationController
     end
 
     def category_params
-      params.require(:category).permit(:id, :name,:post_id)
+      params.require(:category).permit(:name,:post_id)
     end
 end

@@ -45,12 +45,12 @@ class PostsController < ApplicationController
   end
 
 
-  protected
+  private
     def post
       @post ||= Post.find params[:id]
     end
 
     def post_params
-      params.require(:post).permit(:title, :body, :category_id)
+      params.require(:post).permit(:title, :body, :category_ids)
     end
 end
