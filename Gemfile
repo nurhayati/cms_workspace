@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 gem 'pg'
 gem 'devise'
+gem 'likeable'
 
 
 # Use SCSS for stylesheets
