@@ -33,13 +33,6 @@ ActiveRecord::Schema.define(version: 20140617104614) do
     t.datetime "updated_at"
   end
 
-  create_table "category_posts", force: true do |t|
-    t.integer  "category_id"
-    t.integer  "post_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "comments", force: true do |t|
     t.string   "commenter"
     t.text     "body"
@@ -66,7 +59,7 @@ ActiveRecord::Schema.define(version: 20140617104614) do
 
   create_table "posts", force: true do |t|
     t.string   "title"
-    t.string   "body"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

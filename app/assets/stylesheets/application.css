@@ -15,3 +15,33 @@
  *= require bootstrap.min
  *= require offcanvas
  */
+
+.post{
+  width: 800px;
+  margin-top: 10px;
+}
+
+.isi h1{color:white; text-align: center;}
+.isi span.text{
+  width: 100;
+  color:black;
+  margin: 1px;
+}
+.isi:hover{
+  background-color: #00CCFF;
+}
+.isi{
+  width: 800px;
+  margin: 5px;
+  border:1px dashed #000;
+  padding: 10px;
+  background-color: #0099FF;
+  border-radius:5px;
+}
+span.post{
+  color: blue;
+}
+span.link{
+  margin:5px;
+}
+

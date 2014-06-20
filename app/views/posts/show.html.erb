@@ -8,6 +8,9 @@
   <%= @post.body %>
 </p>
 
+<hr />
+<%= link_to 'Like This Post', likes_path(@post.id), :method => :post %>
+<%= link_to "Unlike Post", likes_path(@post.id), :method => :delete %>
 <h2>Comments</h2>
 <%= render @post.comments %>
 
