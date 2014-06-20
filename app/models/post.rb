@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 
+  paginates_per 10
+
   # Validation
   validates :title, presence: true,
                     length: { minimum: 5 }
